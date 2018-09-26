@@ -10,12 +10,11 @@ namespace SampleProjectAzure.Tests.Services
         [Fact]
         public void GivenStockId_WhenStockInformationCalled_ThenReturnInformationForThatStockId()
         {
-            var expected = "Apple";
             var stockService = new StockService();
 
-            var actual = stockService.StockInformation(expected);
+            var actual = stockService.StockInformation("Apple");
 
-            Assert.Equal(expected, actual);
+            Assert.Equal("Some dummy information for stock Apple", actual) ;
         }
 
     }
